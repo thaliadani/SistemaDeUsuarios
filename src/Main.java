@@ -1,13 +1,19 @@
+/**
+ * Classe principal para testar o funcionamento do sistema de usuários.
+ */
 public class Main {
     public static void main(String[] args) {
+        // Instanciação dos diferentes tipos de funcionários
         Gerente gerente = new Gerente();
         Vendedor vendedor = new Vendedor();
         Atendente atendente = new Atendente();
 
+        // Configuração dos dados do Gerente
         gerente.setNome("Paulo");
         gerente.setEmail("paulo@gmail.com");
         gerente.setSenha("daw23QEQEQD");
 
+        // Configuração dos dados do Vendedor
         vendedor.setNome("Ana");
         vendedor.setEmail("ana@gmail.com");
         vendedor.setSenha("dfwf2313");
@@ -16,6 +22,7 @@ public class Main {
         atendente.setEmail("carla@gmail.com");
         atendente.setSenha("1edf24r41");
 
+        // Demonstração das ações do Gerente
         System.out.println("====================");
         System.out.println("Administrador: " + gerente.isAdministrador());
         System.out.println("Nome: " + gerente.getNome());
@@ -24,6 +31,7 @@ public class Main {
         gerente.gerarRelatorioFinanceiro();
         gerente.consultarVendas();
 
+        // Demonstração das ações do Vendedor
         System.out.println("====================");
         System.out.println("Administrador: " + vendedor.isAdministrador());
         System.out.println("Nome: " + vendedor.getNome());
@@ -33,6 +41,7 @@ public class Main {
         System.out.println("Quantidade de vendas: " + vendedor.getQuantidadeDeVendas());
         vendedor.vendas();
 
+        // Demonstração das ações do Atendente
         System.out.println("====================");
         System.out.println("Administrador: " + atendente.isAdministrador());
         System.out.println("Nome: " + atendente.getNome());

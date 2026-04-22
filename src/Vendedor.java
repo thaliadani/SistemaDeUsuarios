@@ -1,5 +1,9 @@
+/**
+ * Classe Vendedor: Especialização de Pessoa.
+ * Focada no controle de volume de vendas.
+ */
 public non-sealed class Vendedor extends Pessoa{
-
+    // Atributo específico para contar o número de vendas realizadas
     int quantidadeDeVendas;
 
     public int getQuantidadeDeVendas() {
@@ -35,7 +39,9 @@ public non-sealed class Vendedor extends Pessoa{
         super.realizarlogff();
     }
 
+    // Incrementa o contador de vendas
     public void realizarVenda(){
+        // Dica: Para somar, deveria ser: setQuantidadeDeVendas(getQuantidadeDeVendas() + 1);
         setQuantidadeDeVendas(+1);
     }
 

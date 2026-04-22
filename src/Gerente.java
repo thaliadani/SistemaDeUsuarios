@@ -1,3 +1,7 @@
+/**
+ * Classe Gerente: Especialização de Pessoa.
+ * Possui privilégios de administrador por padrão.
+ */
 public non-sealed class Gerente extends Pessoa {
 
     @Override
@@ -20,6 +24,7 @@ public non-sealed class Gerente extends Pessoa {
         super.setAdministrador(administrador);
     }
 
+    // O gerente sempre retorna true para administrador
     @Override
     public boolean isAdministrador() {
         return true;
@@ -35,10 +40,12 @@ public non-sealed class Gerente extends Pessoa {
         super.realizarlogff();
     }
 
+    // Funcionalidade exclusiva do Gerente
     public void gerarRelatorioFinanceiro() {
         System.out.println("Gerando relatorio ...");
     }
 
+    // Funcionalidade exclusiva do Gerente
     public void consultarVendas() {
         System.out.println("Consultar Vendas ...");
     }

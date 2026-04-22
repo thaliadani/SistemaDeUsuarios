@@ -1,5 +1,9 @@
+/**
+ * Classe Atendente: Especialização de Pessoa.
+ * Lida com operações de caixa e recebimentos.
+ */
 public non-sealed class Atendente extends Pessoa {
-
+    // Atributo para controlar o montante financeiro no caixa
     double valorEmCaixa;
 
     public double getValorEmCaixa() {
@@ -35,12 +39,14 @@ public non-sealed class Atendente extends Pessoa {
         super.realizarlogff();
     }
 
+    // Registra a entrada de valor no caixa
     public void receberPagamento(){
+        // Dica: Para somar, deveria ser: setValorEmCaixa(getValorEmCaixa() + 1);
         setValorEmCaixa(+1);
     }
 
+    // Finaliza o expediente do caixa
     public void fecharCaixa(){
         System.out.println("Fechar caixa ...");
     }
 }
-
